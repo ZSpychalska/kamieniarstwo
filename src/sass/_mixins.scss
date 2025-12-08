@@ -1,0 +1,77 @@
+@use '_colors.scss' as *;
+
+@mixin contact-btn{
+    margin: auto 1em;
+    padding: 1em 2em;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: $gold;
+    color: $white;
+    transition: background-color .3s, color .3s;
+
+    &:hover{
+        background-color: $white;
+        color: $gold;
+    }
+
+    &:focus{
+        outline: none;
+        background-color: $white;
+        color: $gold;
+    }
+}
+
+@mixin btn-close{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    margin: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &__box{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+    }
+
+    &__x,
+    &__x::after{
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $gold;
+        transition: background-color .3s;
+    }
+
+    &__x{
+        top: 46%;
+        transform: rotate(45deg);
+    }
+
+    &__x::after{
+        transform: rotate(90deg);
+        top: 0;
+        content: '';
+    }
+
+    &:hover &__x,
+    &:hover &__x::after,
+    &:focus &__x,
+    &:focus &__x::after{
+        background-color: $darkGold;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}

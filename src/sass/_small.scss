@@ -1,0 +1,21 @@
+@media (min-width: 576px) {
+    .about-us{
+
+        &__textBox{
+            padding-left: 2em;
+        }
+
+    }
+
+    .contact{
+
+        &-box{
+            align-items: center;
+            width: 100%;
+    
+            &__text-box{
+                justify-content: center;
+            }
+        }
+    }
+}

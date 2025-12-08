@@ -1,0 +1,103 @@
+@use "_colors.scss" as *;
+
+.main {
+  min-height: calc(100vh - 261px - 294.6px);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  position: relative;
+  font-size: 4.8rem;
+  margin: 1em 0.5em;
+  padding: 0.2em 0.5em;
+  color: $gold;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-left: 5px solid $gold;
+    content: "";
+  }
+
+  &__right {
+    text-align: right;
+
+    &::after {
+      right: 0;
+      left: auto;
+      border-left: none;
+      border-right: 5px solid $gold;
+    }
+  }
+}
+
+.page-header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: $white;
+
+  &__hero {
+    &-img,
+    &-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &-img {
+      background-image: url("../img/hero.webp");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    &-shadow {
+      background-color: rgba($charcoalGray, 0.7);
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 5rem;
+    padding: 3em 0 1em 0;
+    color: $gold;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      bottom: 0.5em;
+      width: 300px;
+      height: 5px;
+      transform: translateX(-50%);
+      background-color: $gold;
+      content: "";
+    }
+  }
+}
+
+.white-section {
+  background-color: $white;
+}
+
+.gray-section {
+  background-color: $obsidian;
+}
+.section {
+  padding: 2em 1em;
+}

@@ -1,0 +1,53 @@
+@media (min-width: 768px) {
+    .about-us{
+        &__boxes{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__text{
+            font-size: 2.5rem;
+        }
+    }
+
+    .offers{
+        &-boxes{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .offersAdditional{
+        &__boxes{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around; 
+        }
+
+        &__box{
+            margin: 4em 2em;
+        }
+    }
+
+    .contact{
+        &__map{
+            height: 500px;
+        }
+    }
+
+    .offers-page{
+
+        &__box{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+        &__text{
+            margin: 0 1em;
+
+            &__right{
+                order: 0;
+            }
+        }
+    }
+}

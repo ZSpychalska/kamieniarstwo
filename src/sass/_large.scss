@@ -1,0 +1,135 @@
+@media (min-width: 900px) {
+
+    html{
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 95px;
+    }
+
+    .mobile-nav__box{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: flex;
+    }
+
+    .about-us{
+        &__container{
+            display: flex;
+            flex-direction:  row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__textBox{
+            width: 60%;
+        }
+
+        &__infoText{
+            min-width: 282px;
+        }
+
+    }
+
+    .footer-mobile{
+        display: none;
+    }
+
+    .footer-desktop{
+        display: flex;
+    }
+
+    .contact{
+        position: relative;
+    
+        &-box{
+            position: absolute;
+            bottom: 3.6em;
+            right: 0;
+            transform: translateX(-10%);
+            align-items: start;
+            margin: auto;
+            height: 550px;
+            width: 400px;
+            background-color: $obsidian;
+    
+            &__text{
+                color: $white;
+            }
+    
+            &__icon{
+                color: $white;
+            }
+        }
+    
+        &__map{
+            height: 600px;
+        }
+    }
+
+    .offers-page{
+    
+        &__img{
+            width: 400px;
+            height: 350px;
+        }
+    
+        &__text{
+            margin: 0 1em;
+            width: 500px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-header{
+        
+        &__title{
+            font-size: 4.5rem;
+        }
+    
+        &__line{
+            animation: header-line-show-2 5s forwards;
+        }
+    
+        &__date{
+            font-size: 2.5rem;
+        }
+    }
+
+    .about-us{
+
+        &__infoText{
+            &-number{
+                font-size: 12rem;
+            }
+    
+            &-icon{
+                font-size: 7rem;
+            }
+        }
+
+    }
+
+    .offers-page{
+    
+        &__img{
+            min-width: 420px;
+            width: 420px;
+            height: 390px;
+        }
+    
+        &__text{
+            font-size: 2.5rem;
+        }
+    }
+
+    .contact{
+    
+        &-box{
+            right: auto;
+            transform: translateX(190%);
+        }
+    }
+}
